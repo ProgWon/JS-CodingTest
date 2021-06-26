@@ -63,6 +63,37 @@ const words = str.split(' '); // [ 'progwon', 'is', 'a', 'boy' ]
 console.log(words.length - 1) // 3 (공백의 개수)
 
 ```
+
+#### 2. substring()
+
+시작 인덱스부터 종료 인덱스 전(전까지가 중요합니다. 포함하지 않습니다.)까지의 부분 문자열을 반환합니다.
+
+```javascript
+const str = 'progwon is a boy'
+console.log(str.substring(0, 4)); // prog (0 ~ 3 까지)
+```
+
+만약 종료 인덱스와 시작 인덱스가 같으면 빈 문자열을 반환합니다.
+
+```javascript
+const str = 'progwon is a boy'
+console.log(str.substring(0, 0)); // 빈 문자열
+```
+
+만약 종료 인덱스가 시작 인덱스보다 작은 경우 두 인자를 바꾼것처럼 작동합니다.
+
+```javascript
+const str = 'progwon is a boy'
+console.log(str.substring(4, 0)); // prog 마치 0, 4 처럼 작동!
+```
+
+종료 인덱스 없이 시작 인덱스만 있으면 시작 인덱스부터 끝까지 반환합니다.
+
+```javascript
+const str = 'progwon is a boy'
+console.log(str.substring(0)); // 'progwon is a boy' 
+```
+
 ## 배열
 
 ### 배열에 값 추가하기
